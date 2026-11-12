@@ -2,9 +2,9 @@
 
 Data, queries and scripts for the article
 
-> George Bruseker, Matthew Fielding, Denitsa Nenova, Rocio Jimenez-Diaz and Thomas Hänsli. *Art and Architectural Argumentation Ontology: A CIDOC CRM Compatible Ontology for Semantically Representing Historical Research Data.* ACM Journal on Computing and Cultural Heritage (JOCCH), submission JOCCH-26-0283. DOI to be added.
+> George Bruseker, Matthew Fielding, Denitsa Nenova, Rocio Jimenez-Diaz and Thomas Hänsli. *Art and Architectural Argumentation Ontology: A CIDOC CRM Compatible Ontology for Semantically Representing Historical Research Data.* Submitted to the ACM Journal on Computing and Cultural Heritage (JOCCH).
 
-Archived version of this supplement: DOI to be added.
+The ontology used throughout is CRMaaa 1.5.4.2, archived at https://doi.org/10.5281/zenodo.24163947.
 
 ## What is here
 
