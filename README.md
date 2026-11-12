@@ -12,7 +12,7 @@ The article describes the core of the ontology (version 0.9 as specified in CRMa
 
 | Folder | Article | Contents |
 |---|---|---|
-| `ontology/` | 4.1 | `crmaaa-1.5.4.2.rdf`, a copy of the release published at https://github.com/swiss-art-research-net/crmaaa |
+| `ontology/` | 4.1 | `crmaaa-1.5.4.2.rdf`, a copy of the release published at https://github.com/swiss-art-research-net/crmaaa and archived at https://doi.org/10.5281/zenodo.24163947 |
 | `5-use-cases/` | 5 | The three use cases in Turtle: Isabella, the G'psgolox Totem Pole, the Brandenburg Gate |
 | `6.1-compatibility/` | 6.1 | Checks the use-case data against the ontologies, projects it to plain CIDOC CRM and runs the perspective query |
 | `6.2-equal-information/` | 6.2 | Encodes the same historical information in CIDOC CRM and in AAAo and counts triples, nodes and query patterns |
