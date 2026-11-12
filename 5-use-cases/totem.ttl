@@ -1,0 +1,46 @@
+# Use case 2: the contested ownership of the G'psgolox Totem Pole.
+# Follows Figure 8 of the paper. AAAo core terms, as specified in CRMaaa 1.5.4.
+@prefix aaao:  <https://takin.solutions/ontologies/crmaaa/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:   <https://example.org/aaao/totem/> .
+
+ex:pole a crm:E22_Human-Made_Object ; rdfs:label "G'psgolox Totem Pole" .
+ex:haisla a crm:E74_Group ; rdfs:label "Haisla people" .
+ex:canada a crm:E74_Group ; rdfs:label "Canadian government" .
+ex:hanson a crm:E21_Person ; rdfs:label "Olof Hanson" .
+
+ex:haisla_principles a crm:E29_Design_or_Procedure ; rdfs:label "Haisla ownership principles" .
+ex:canadian_law a crm:E29_Design_or_Procedure ; rdfs:label "Canadian ownership law" .
+
+# Haisla ownership, held for the Haisla
+ex:own_haisla a aaao:ZE8_Ownership_Status ;
+  aaao:ZP23_has_ownership_subject ex:pole ;
+  aaao:ZP24_ascribes_owner ex:haisla ;
+  aaao:ZP25_ascribes_ownership_relation crm:P51_has_former_or_current_owner ;
+  aaao:ZP4_holds_for ex:haisla ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1872-01-01T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2012-12-31T23:59:59"^^xsd:dateTime ] .
+
+ex:pole_raising a aaao:ZE20_Declarative_Acquisition ;
+  rdfs:label "Pole raising ceremony" ;
+  crm:P14_carried_out_by ex:haisla ;
+  aaao:ZP40_performed ex:haisla_principles ;
+  aaao:ZP42_intentionally_initiated ex:own_haisla .
+
+# Hanson's ownership, held for the Canadian government
+ex:own_hanson a aaao:ZE8_Ownership_Status ;
+  aaao:ZP23_has_ownership_subject ex:pole ;
+  aaao:ZP24_ascribes_owner ex:hanson ;
+  aaao:ZP25_ascribes_ownership_relation crm:P51_has_former_or_current_owner ;
+  aaao:ZP4_holds_for ex:canada ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1929-01-01T00:00:00"^^xsd:dateTime ] .
+
+ex:authorization a aaao:ZE20_Declarative_Acquisition ;
+  rdfs:label "Authorization for removal of the pole" ;
+  crm:P14_carried_out_by ex:canada ;
+  aaao:ZP40_performed ex:canadian_law ;
+  aaao:ZP42_intentionally_initiated ex:own_hanson .

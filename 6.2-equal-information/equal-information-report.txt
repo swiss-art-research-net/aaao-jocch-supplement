@@ -1,0 +1,20 @@
+1. Size at equal information (beyond object, appellation, documents)
+  A. state attested between two dates, two documents
+    CIDOC CRM: 20 triples, 4 nodes | AAAo: 9 triples, 2 nodes
+  B. state attested from a date on, one document
+    CIDOC CRM: 9 triples, 2 nodes | AAAo: 7 triples, 2 nodes
+  C. naming act documented (AAAo also records the state it initiated)
+    CIDOC CRM: 9 triples, 2 nodes | AAAo: 16 triples, 4 nodes
+
+   General case: dated state attested by k documents
+    k=1: CIDOC CRM 18 (16+2k) | AAAo 8 (7+k) | ratio 0.44
+    k=2: CIDOC CRM 20 (16+2k) | AAAo 9 (7+k) | ratio 0.45
+    k=3: CIDOC CRM 22 (16+2k) | AAAo 10 (7+k) | ratio 0.45
+    k=4: CIDOC CRM 24 (16+2k) | AAAo 11 (7+k) | ratio 0.46
+    k=5: CIDOC CRM 26 (16+2k) | AAAo 12 (7+k) | ratio 0.46
+
+2. Query 'names on a date'
+  triple patterns: CIDOC CRM 12, AAAo 5
+  one period (2016-2019), date 2017-06-01: CRM ['title'], AAAo ['title']
+  two periods (1950-1960, 2016-2019), date 1990-06-01: CRM ['title'], AAAo []
+  two periods (1950-1960, 2016-2019), date 2017-06-01: CRM ['title', 'title'], AAAo ['title']

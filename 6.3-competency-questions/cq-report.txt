@@ -1,0 +1,83 @@
+Competency questions over the use-case data (CRMaaa 1.5.4.2 + CIDOC CRM 7.1.3; engine: Oxigraph)
+
+=== isabella.ttl  (entity: Isabella (painting by Simon Maris); date for CQ1: 2017-06-01)
+  CQ1: What [relation] did [entity] have at [date], and for which group?
+    AAAo (2 rows)
+      crm:P1_is_identified_by | Isabella | -
+      crm:P1_is_identified_by | Young Woman with a Fan | Rijksmuseum
+    CIDOC CRM alone (3 rows)
+      crm:P1_is_identified_by | Isabella
+      crm:P1_is_identified_by | Young Negro Girl
+      crm:P1_is_identified_by | Young Woman with a Fan
+  CQ2: For [entity], which statuses conflict: different values held for different groups over overlapping periods?
+    AAAo (0 rows)
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ3: Which act brought [status] about or ended it, who performed it, and under which procedure?
+    AAAo (4 rows)
+      Isabella | initiated | ex:renaming_2020 | Rijksmuseum | -
+      Young Negro Girl | terminated | Renaming of 2015 | Rijksmuseum | Rules for Terminology Adjustment
+      Young Woman with a Fan | initiated | Renaming of 2015 | Rijksmuseum | Rules for Terminology Adjustment
+      Young Woman with a Fan | terminated | ex:renaming_2020 | Rijksmuseum | -
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ4: Which statuses of [entity] have no known founding act (states attested without an attested event)?
+    AAAo (2 rows)
+      crm:P1_is_identified_by | Isabella
+      crm:P1_is_identified_by | Young Negro Girl
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ5: Which documents attest [status]?
+    AAAo (2 rows)
+      Isabella | - | Lambrechts 2020, The Rijksmuseum Bulletin 68(2)
+      Isabella | Rijksmuseum | Lambrechts 2020, The Rijksmuseum Bulletin 68(2)
+    CIDOC CRM alone (1 rows)
+      Lambrechts 2020, The Rijksmuseum Bulletin 68(2)
+
+=== totem.ttl  (entity: G'psgolox Totem Pole; date for CQ1: 1950-01-01)
+  CQ1: What [relation] did [entity] have at [date], and for which group?
+    AAAo (2 rows)
+      crm:P51_has_former_or_current_owner | Haisla people | Haisla people
+      crm:P51_has_former_or_current_owner | Olof Hanson | Canadian government
+    CIDOC CRM alone (2 rows)
+      crm:P51_has_former_or_current_owner | Haisla people
+      crm:P51_has_former_or_current_owner | Olof Hanson
+  CQ2: For [entity], which statuses conflict: different values held for different groups over overlapping periods?
+    AAAo (1 rows)
+      Haisla people | Haisla people | Olof Hanson | Canadian government | 1929-01-01 | 2012-12-31
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ3: Which act brought [status] about or ended it, who performed it, and under which procedure?
+    AAAo (2 rows)
+      Haisla people | initiated | Pole raising ceremony | Haisla people | Haisla ownership principles
+      Olof Hanson | initiated | Authorization for removal of the pole | Canadian government | Canadian ownership law
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ4: Which statuses of [entity] have no known founding act (states attested without an attested event)?
+    AAAo (0 rows)
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ5: Which documents attest [status]?
+    AAAo (0 rows)
+    CIDOC CRM alone (0 rows)
+
+=== brandenburg.ttl  (entity: Vision of the Brandenburg Gate; date for CQ1: 1975-01-01)
+  CQ1: What [relation] did [entity] have at [date], and for which group?
+    AAAo (2 rows)
+      crm:P129_is_about | German division | -
+      crm:P129_is_about | New Athens on the river Spree | -
+    CIDOC CRM alone (3 rows)
+      crm:P129_is_about | German division
+      crm:P129_is_about | German unity
+      crm:P129_is_about | New Athens on the river Spree
+  CQ2: For [entity], which statuses conflict: different values held for different groups over overlapping periods?
+    AAAo (0 rows)
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ3: Which act brought [status] about or ended it, who performed it, and under which procedure?
+    AAAo (2 rows)
+      New Athens on the river Spree | initiated | Inauguration of the Brandenburg Gate | Carl Gotthard Langhans | -
+      New Athens on the river Spree | initiated | Inauguration of the Brandenburg Gate | Friedrich Wilhelm II | -
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ4: Which statuses of [entity] have no known founding act (states attested without an attested event)?
+    AAAo (2 rows)
+      crm:P129_is_about | German division
+      crm:P129_is_about | German unity
+    CIDOC CRM alone: not expressible (no group, time-span or founding act on a property instance)
+  CQ5: Which documents attest [status]?
+    AAAo (0 rows)
+    CIDOC CRM alone (0 rows)
+

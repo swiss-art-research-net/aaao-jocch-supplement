@@ -1,0 +1,32 @@
+Ontologies: CRMaaa 1.5.4.2 + CIDOC CRM 7.1.3
+
+== isabella.ttl
+  71 triples
+  AAAo data: 42 non-type triples checked, 0 problems
+  projection to CIDOC CRM: 3 distinct triples
+    ex:painting crm:P1_is_identified_by ex:isabella
+    ex:painting crm:P1_is_identified_by ex:yng
+    ex:painting crm:P1_is_identified_by ex:ywf
+  projected CRM data: 3 non-type triples checked, 0 problems
+
+== totem.ttl
+  39 triples
+  AAAo data: 19 non-type triples checked, 0 problems
+  projection to CIDOC CRM: 2 distinct triples
+    ex:pole crm:P51_has_former_or_current_owner ex:haisla
+    ex:pole crm:P51_has_former_or_current_owner ex:hanson
+  projected CRM data: 2 non-type triples checked, 0 problems
+  perspective query: owners of the pole on 1950-01-01, and for whom
+    Haisla people (holds for Haisla people)
+    Olof Hanson (holds for Canadian government)
+
+== brandenburg.ttl
+  42 triples
+  AAAo data: 20 non-type triples checked, 0 problems
+  projection to CIDOC CRM: 3 distinct triples
+    ex:vision crm:P129_is_about ex:division
+    ex:vision crm:P129_is_about ex:new_athens
+    ex:vision crm:P129_is_about ex:unity
+  projected CRM data: 3 non-type triples checked, 0 problems
+
+Total problems: 0

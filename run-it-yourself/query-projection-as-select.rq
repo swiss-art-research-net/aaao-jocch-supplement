@@ -1,0 +1,14 @@
+PREFIX aaao: <https://takin.solutions/ontologies/crmaaa/>
+PREFIX crm:  <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?subject ?crmProperty ?target
+WHERE {
+  ?fact ?subjectProp ?subject ;
+        ?targetProp ?target ;
+        ?relationProp ?crmProperty .
+  ?subjectProp  rdfs:subPropertyOf* aaao:ZP1_has_intentional_subject .
+  ?targetProp   rdfs:subPropertyOf* aaao:ZP2_ascribes_intentional_target .
+  ?relationProp rdfs:subPropertyOf* aaao:ZP3_ascribes_intentional_relation .
+}

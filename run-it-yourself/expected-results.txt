@@ -1,0 +1,14 @@
+isabella: projection returns 3 statements
+   ex:painting crm:P1_is_identified_by ex:isabella
+   ex:painting crm:P1_is_identified_by ex:yng
+   ex:painting crm:P1_is_identified_by ex:ywf
+totem: projection returns 2 statements
+   ex:pole crm:P51_has_former_or_current_owner ex:haisla
+   ex:pole crm:P51_has_former_or_current_owner ex:hanson
+brandenburg: projection returns 3 statements
+   ex:vision crm:P129_is_about ex:division
+   ex:vision crm:P129_is_about ex:new_athens
+   ex:vision crm:P129_is_about ex:unity
+totem: perspective query (owners on 1 January 1950, and for whom)
+   Haisla people | Haisla people
+   Olof Hanson | Canadian government

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the article and this supplement."
+title: "Supplementary material: Art and Architectural Argumentation Ontology"
+type: dataset
+license: CC-BY-SA-4.0
+authors:
+  - family-names: Bruseker
+    given-names: George
+    orcid: "https://orcid.org/0000-0001-7519-1970"
+    affiliation: "Takin.solutions; Swiss Art Research Infrastructure (SARI), University of Zurich"
+  - family-names: Fielding
+    given-names: Matthew
+    orcid: "https://orcid.org/0009-0001-5543-1372"
+    affiliation: "Dalhousie University"
+  - family-names: Nenova
+    given-names: Denitsa
+    orcid: "https://orcid.org/0000-0003-3138-1689"
+    affiliation: "Takin.solutions; Swiss Art Research Infrastructure (SARI), University of Zurich"
+  - family-names: Jimenez-Diaz
+    given-names: Rocio
+    orcid: "https://orcid.org/0009-0006-4916-3638"
+    affiliation: "University of Teramo; University of Las Palmas de Gran Canaria"
+  - family-names: Hänsli
+    given-names: Thomas
+    orcid: "https://orcid.org/0000-0001-7818-5605"
+    affiliation: "ETH Zürich, gta Digital; Swiss Art Research Infrastructure (SARI), University of Zurich"
+version: "1.0.0"
+date-released: "2026-11-12"
+keywords: [CIDOC CRM, ontology, institutional facts, speech acts, art history, linked data]

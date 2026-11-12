@@ -1,0 +1,86 @@
+# Use case 1: the names of the painting Isabella (Rijksmuseum).
+# Follows Section 5.1 of the paper: all four name statuses and both naming
+# acts. Figure 7 shows the 2015 renaming. AAAo core terms, as specified in CRMaaa 1.5.4.
+@prefix aaao:  <https://takin.solutions/ontologies/crmaaa/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:   <https://example.org/aaao/isabella/> .
+
+ex:painting a crm:E22_Human-Made_Object ;
+  rdfs:label "Isabella (painting by Simon Maris)" .
+
+ex:rijksmuseum a crm:E74_Group ; rdfs:label "Rijksmuseum" .
+
+ex:isabella a crm:E33_E41_Linguistic_Appellation ; crm:P190_has_symbolic_content "Isabella" .
+ex:yng      a crm:E33_E41_Linguistic_Appellation ; crm:P190_has_symbolic_content "Young Negro Girl" .
+ex:ywf      a crm:E33_E41_Linguistic_Appellation ; crm:P190_has_symbolic_content "Young Woman with a Fan" .
+
+ex:artist_title a crm:E55_Type ; rdfs:label "Artist title" .
+ex:official     a crm:E55_Type ; rdfs:label "Official" .
+ex:lambrechts2020 a crm:E31_Document ;
+  rdfs:label "Lambrechts 2020, The Rijksmuseum Bulletin 68(2)" .
+
+# The artist's own title, attested from 1907
+ex:status_artist a aaao:ZE2_Appellative_Status ;
+  rdfs:label "Original name of Isabella" ;
+  aaao:ZP5_has_appellative_subject ex:painting ;
+  aaao:ZP6_ascribes_appellation ex:isabella ;
+  aaao:ZP7_ascribes_appellative_relation crm:P1_is_identified_by ;
+  crm:P2_has_type ex:artist_title ;
+  crm:P67i_is_referred_to_by ex:lambrechts2020 ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1907-01-01T00:00:00"^^xsd:dateTime ] .
+
+# Official names for the Rijksmuseum
+ex:status_yng a aaao:ZE2_Appellative_Status ;
+  aaao:ZP5_has_appellative_subject ex:painting ;
+  aaao:ZP6_ascribes_appellation ex:yng ;
+  aaao:ZP7_ascribes_appellative_relation crm:P1_is_identified_by ;
+  aaao:ZP4_holds_for ex:rijksmuseum ;
+  crm:P2_has_type ex:official ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82b_end_of_the_end "2015-12-31T23:59:59"^^xsd:dateTime ] .
+
+ex:status_ywf a aaao:ZE2_Appellative_Status ;
+  aaao:ZP5_has_appellative_subject ex:painting ;
+  aaao:ZP6_ascribes_appellation ex:ywf ;
+  aaao:ZP7_ascribes_appellative_relation crm:P1_is_identified_by ;
+  aaao:ZP4_holds_for ex:rijksmuseum ;
+  crm:P2_has_type ex:official ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2015-01-01T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "2020-12-31T23:59:59"^^xsd:dateTime ] .
+
+ex:status_isabella a aaao:ZE2_Appellative_Status ;
+  aaao:ZP5_has_appellative_subject ex:painting ;
+  aaao:ZP6_ascribes_appellation ex:isabella ;
+  aaao:ZP7_ascribes_appellative_relation crm:P1_is_identified_by ;
+  aaao:ZP4_holds_for ex:rijksmuseum ;
+  crm:P2_has_type ex:official ;
+  crm:P67i_is_referred_to_by ex:lambrechts2020 ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2020-01-01T00:00:00"^^xsd:dateTime ] .
+
+# The renaming acts
+# The 2015 renaming was part of the museum's "Adjustment of Colonial
+# Terminology" project and followed its rules (Figure 7 of the paper).
+ex:terminology_project a crm:E7_Activity ;
+  rdfs:label "Adjustment of Colonial Terminology" ;
+  crm:P14_carried_out_by ex:rijksmuseum ;
+  crm:P9_consists_of ex:renaming_2015 .
+
+ex:terminology_rules a crm:E29_Design_or_Procedure ;
+  rdfs:label "Rules for Terminology Adjustment" .
+
+ex:renaming_2015 a aaao:ZE19_Naming ;
+  rdfs:label "Renaming of 2015" ;
+  crm:P14_carried_out_by ex:rijksmuseum ;
+  aaao:ZP40_performed ex:terminology_rules ;
+  aaao:ZP52_intentionally_terminated ex:status_yng ;
+  aaao:ZP42_intentionally_initiated ex:status_ywf .
+
+ex:renaming_2020 a aaao:ZE19_Naming ;
+  crm:P14_carried_out_by ex:rijksmuseum ;
+  aaao:ZP52_intentionally_terminated ex:status_ywf ;
+  aaao:ZP42_intentionally_initiated ex:status_isabella .

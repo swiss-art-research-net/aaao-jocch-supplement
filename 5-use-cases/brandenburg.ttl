@@ -1,0 +1,45 @@
+# Use case 3: the changing meaning of the Brandenburg Gate.
+# Follows Figure 10 of the paper. AAAo core terms, as specified in CRMaaa 1.5.4.
+@prefix aaao:  <https://takin.solutions/ontologies/crmaaa/> .
+@prefix crm:  <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:   <https://example.org/aaao/brandenburg/> .
+
+ex:gate a crm:E22_Human-Made_Object ; rdfs:label "Brandenburg Gate" ;
+  crm:P65_shows_visual_item ex:vision .
+ex:vision a crm:E36_Visual_Item ; rdfs:label "Vision of the Brandenburg Gate" .
+
+ex:new_athens a crm:E33_Linguistic_Object ; rdfs:label "New Athens on the river Spree" .
+ex:division   a crm:E33_Linguistic_Object ; rdfs:label "German division" .
+ex:unity      a crm:E33_Linguistic_Object ; rdfs:label "German unity" .
+
+ex:langhans a crm:E21_Person ; rdfs:label "Carl Gotthard Langhans" .
+ex:fw2      a crm:E21_Person ; rdfs:label "Friedrich Wilhelm II" .
+
+ex:inauguration a aaao:ZE13_Speech_Act ;
+  rdfs:label "Inauguration of the Brandenburg Gate" ;
+  crm:P14_carried_out_by ex:langhans, ex:fw2 ;
+  aaao:ZP42_intentionally_initiated ex:ref_start .
+
+ex:ref_start a aaao:ZE12_Referential_Status ;
+  aaao:ZP35_has_referential_subject ex:vision ;
+  aaao:ZP36_ascribes_referent ex:new_athens ;
+  aaao:ZP37_ascribes_referential_relation crm:P129_is_about ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1791-01-01T00:00:00"^^xsd:dateTime ] .
+
+ex:ref_wall a aaao:ZE12_Referential_Status ;
+  aaao:ZP35_has_referential_subject ex:vision ;
+  aaao:ZP36_ascribes_referent ex:division ;
+  aaao:ZP37_ascribes_referential_relation crm:P129_is_about ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1961-01-01T00:00:00"^^xsd:dateTime ;
+    crm:P82b_end_of_the_end "1989-12-31T23:59:59"^^xsd:dateTime ] .
+
+ex:ref_unity a aaao:ZE12_Referential_Status ;
+  aaao:ZP35_has_referential_subject ex:vision ;
+  aaao:ZP36_ascribes_referent ex:unity ;
+  aaao:ZP37_ascribes_referential_relation crm:P129_is_about ;
+  crm:P4_has_time-span [ a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "1989-01-01T00:00:00"^^xsd:dateTime ] .

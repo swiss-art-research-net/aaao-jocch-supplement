@@ -1,0 +1,20 @@
+PREFIX aaao: <https://takin.solutions/ontologies/crmaaa/>
+PREFIX crm:  <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?ownerLabel ?groupLabel
+WHERE {
+  ?status a aaao:ZE8_Ownership_Status ;
+          aaao:ZP23_has_ownership_subject ?pole ;
+          aaao:ZP24_ascribes_owner ?owner ;
+          aaao:ZP4_holds_for ?group ;
+          crm:P4_has_time-span ?ts .
+  ?pole rdfs:label "G'psgolox Totem Pole" .
+  ?owner rdfs:label ?ownerLabel .
+  ?group rdfs:label ?groupLabel .
+  OPTIONAL { ?ts crm:P82a_begin_of_the_begin ?begin }
+  OPTIONAL { ?ts crm:P82b_end_of_the_end ?end }
+  FILTER ((!BOUND(?begin) || ?begin <= "1950-01-01T00:00:00"^^xsd:dateTime) &&
+          (!BOUND(?end)   || ?end   >= "1950-01-01T00:00:00"^^xsd:dateTime))
+}
