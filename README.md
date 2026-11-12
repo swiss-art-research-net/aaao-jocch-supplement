@@ -1,5 +1,7 @@
 # Supplementary material: Art and Architectural Argumentation Ontology
 
+[![DOI](https://zenodo.org/badge/1455291477.svg)](https://doi.org/10.5281/zenodo.24164100)
+
 Data, queries and scripts for the article
 
 > George Bruseker, Matthew Fielding, Denitsa Nenova, Rocio Jimenez-Diaz and Thomas Hänsli. *Art and Architectural Argumentation Ontology: A CIDOC CRM Compatible Ontology for Semantically Representing Historical Research Data.* Submitted to the ACM Journal on Computing and Cultural Heritage (JOCCH).
